@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(./Whitney-Book.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+.chat-messages::-webkit-scrollbar {
+    width: 0.8em;
+    border-radius: 10px;
+}
+.chat-messages::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #dcddde3d;
+}
+body {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+html, body, #root, .container {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #202225;
+    color: #dcddde;
+    font-family: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    
+    
+}
+
+time {
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns:  auto 55em auto;
+}
+
+.chat {
+    display: grid;
+    background-color: #2f3136;
+    grid-column: 2;
+    grid-template-rows: 100px auto 80px; /* - - 80px-260px*/
+   
+}
+
+.chat-header {
+    display: grid;
+    grid-row: 1;
+    background-color: #2f3136;
+    margin: 0;
+    text-align: center;
+}
+.header-title { 
+    justify-self: center;
+    padding: 6px 20px 7px 20px;
+    background-color: #36393f;
+    border-radius: 25px;
+}
+
+.chat-messages {
+    grid-row: 2;
+    height: 100%;
+    max-height: 67vmax; /* 85vh*/
+    font-size: 18px;
+    background-color: #36393f;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 10px 0px 10px;
+    overflow-y: auto;
+}
+
+.messages-msg {
+    word-wrap: break-word;
+}
+
+
+.chat-submit {
+    grid-row: 3;
+    background-color: #2f3136;
+}
+
+.submit-form {
+    display: grid;
+    grid-template-columns: 80% auto;
+    margin: 10px;
+    
+}
+
+.form-input {
+    height: 100%;
+    font-family: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #dcddde;
+    background-color: #ffffff27;
+    border: 2px solid #7d7e80;
+    border-radius: 10px 5px 5px 10px;
+    padding: 16px 20px 16px 20px;
+    margin-right: 5px;
+    resize: none;
+    overflow: hidden;
+    min-height: 60px;
+    max-height: 243px;
+    
+}
+.form-input:focus, .form-button:focus {
+    border: 2px solid #dcddde;
+}
+
+.form-button {
+    font-family: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    color: #dcddde;
+    background-color: #ffffff27;
+    border: 2px solid #7d7e80;
+    border-radius: 5px 10px 10px 5px;
+}
+
+.form-button:hover {
+    cursor: pointer;
+}
+.form-button:active {
+    background-color: #ffffff1a;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .messages-msg {
+        font-size: 30px;
+    }
+    .form-button {
+        font-size: 30px;
+    }
+    .form-input {
+        font-size: 30px;
+    }
+}
